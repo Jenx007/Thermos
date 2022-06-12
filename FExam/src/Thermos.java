@@ -18,10 +18,10 @@ public class Thermos {
 		
 	}
 	
-	void pourLiquid(double Rmvol)
+	double pourLiquid(double Rmvol)
 	{
 		volume = volume - Rmvol;
-		//return volume;
+		return volume;
 	}
 	void display()
 	{
