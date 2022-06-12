@@ -11,13 +11,18 @@ public class Thermos {
 		liq_juice = lj;
 	}
 	
-	void addLiquid(double vol, String Brand, String lj)
+	double addLiquid(double Advol)
 	{
-		volume = vol;
-		this.brand = Brand;
-		liq_juice = lj;
+		volume = volume + Advol;
+		return volume;
+		
 	}
 	
+	double pourLiquid(double Rmvol)
+	{
+		volume = volume - Rmvol;
+		return volume;
+	}
 	void display()
 	{
 		System.out.println("Volume in Litres: " +volume+ " Litres");
@@ -28,8 +33,9 @@ public class Thermos {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Thermos jc = new Thermos(0, " ", " ");
-		jc.addLiquid(0.95, "Godrej", "Orange juice");
+		Thermos jc = new Thermos(0, "Godrej", "Orange juice");
+		jc.addLiquid(0.95);
+		jc.pourLiquid(0.25);
 		jc.display();
 	}
 
